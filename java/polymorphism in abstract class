@@ -1,0 +1,34 @@
+package oops;
+
+abstract class Shape{
+	abstract void rectangleArea(int l,int b);
+	abstract void square(int a);
+	abstract void circle(int r);
+}
+class Area extends Shape{
+	void rectangleArea(int l,int b) {
+		int area=l*b;
+		System.out.println("Area of rectangle is: "+ area);
+	}
+	void square(int a) {
+		int area= a*a;
+		System.out.println("Area of square is: "+ area);
+	}
+	void circle(int r) {
+		float area= (float)3.14*r*r;
+		System.out.println("Area of circle is: "+ area);
+	}
+}
+
+public class practice2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Area obj=new Area();
+		obj.rectangleArea(4, 2);
+		obj.square(5);
+		obj.circle(7);
+	
+	}
+
+}
