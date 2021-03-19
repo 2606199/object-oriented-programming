@@ -1,0 +1,36 @@
+package oops;
+
+import java.util.Scanner;
+
+public class ArrayDemo {
+
+	static void arrayFunc(int a[],int n) {
+		int s=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter sum: ");
+		int m=sc.nextInt();
+		for(int i=0;i<n-1;i++) {
+			
+			for(int j=i+1;j<n;j++) {
+			s=a[i]+a[j];
+			if(s==m) {
+				System.out.println("First Pair is; "+a[i]+" "+a[j]);
+			}
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter number of elements: ");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+		}
+		
+		arrayFunc(a,n);
+	}
+
+}
